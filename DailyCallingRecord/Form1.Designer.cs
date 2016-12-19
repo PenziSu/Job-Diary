@@ -34,6 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.textBoxEID = new System.Windows.Forms.TextBox();
             this.textBoxExt = new System.Windows.Forms.TextBox();
             this.textBoxEndEventTime = new System.Windows.Forms.TextBox();
@@ -46,8 +47,9 @@
             this.EventEndTime = new System.Windows.Forms.Button();
             this.buttonSend = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dataGrid1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -90,11 +92,17 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 308);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 638);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(604, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(752, 22);
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(46, 17);
+            this.toolStripStatusLabel1.Text = "Ready.";
             // 
             // textBoxEID
             // 
@@ -156,7 +164,7 @@
             this.textBoxEventDescription.Location = new System.Drawing.Point(227, 27);
             this.textBoxEventDescription.Multiline = true;
             this.textBoxEventDescription.Name = "textBoxEventDescription";
-            this.textBoxEventDescription.Size = new System.Drawing.Size(365, 224);
+            this.textBoxEventDescription.Size = new System.Drawing.Size(513, 224);
             this.textBoxEventDescription.TabIndex = 20;
             // 
             // comboBoxAppMenu
@@ -178,7 +186,6 @@
             this.comboBoxAppMenu.Name = "comboBoxAppMenu";
             this.comboBoxAppMenu.Size = new System.Drawing.Size(121, 20);
             this.comboBoxAppMenu.TabIndex = 21;
-//this.comboBoxAppMenu.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // EventEndTime
             // 
@@ -192,7 +199,7 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(483, 257);
+            this.buttonSend.Location = new System.Drawing.Point(12, 258);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(109, 37);
             this.buttonSend.TabIndex = 23;
@@ -204,17 +211,21 @@
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
-            // toolStripStatusLabel1
+            // dataGrid1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(47, 17);
-            this.toolStripStatusLabel1.Text = "Ready.";
+            this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid1.Location = new System.Drawing.Point(12, 300);
+            this.dataGrid1.Name = "dataGrid1";
+            this.dataGrid1.RowTemplate.Height = 24;
+            this.dataGrid1.Size = new System.Drawing.Size(728, 321);
+            this.dataGrid1.TabIndex = 24;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 330);
+            this.ClientSize = new System.Drawing.Size(752, 660);
+            this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.EventEndTime);
             this.Controls.Add(this.comboBoxAppMenu);
@@ -236,9 +247,9 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Job Diary";
-//this.Load += new System.EventHandler(this.MainForm_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +274,7 @@
         private System.Windows.Forms.Button buttonSend;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.DataGridView dataGrid1;
     }
 }
 
