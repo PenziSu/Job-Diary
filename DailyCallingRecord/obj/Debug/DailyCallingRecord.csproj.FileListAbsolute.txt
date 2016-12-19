@@ -27,3 +27,23 @@ D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.MainFo
 D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\JobDiary.Properties.Resources.resources
 D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.csproj.GenerateResource.Cache
 D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.csproj.ResolveComReference.cache
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\JobDiary.exe.config
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.csproj.ResolveComReference.cache
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\obj\Debug\JobDiary.exe
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\obj\Debug\JobDiary.pdb
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\JobDiary.exe
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\JobDiary.pdb
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\Telerik.WinControls.xml
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.csprojResolveAssemblyReference.cache
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.MainForm.resources
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\obj\Debug\JobDiary.Properties.Resources.resources
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.csproj.GenerateResource.Cache
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.dll
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OOXML.dll
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.xml
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OOXML.xml
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OpenXml4Net.xml
