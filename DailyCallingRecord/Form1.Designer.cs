@@ -178,7 +178,7 @@
             this.comboBoxAppMenu.Name = "comboBoxAppMenu";
             this.comboBoxAppMenu.Size = new System.Drawing.Size(121, 20);
             this.comboBoxAppMenu.TabIndex = 21;
-            this.comboBoxAppMenu.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+//this.comboBoxAppMenu.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // EventEndTime
             // 
@@ -236,7 +236,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Job Diary";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+//this.Load += new System.EventHandler(this.MainForm_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
