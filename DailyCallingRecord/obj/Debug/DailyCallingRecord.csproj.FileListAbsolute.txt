@@ -1,0 +1,17 @@
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\bin\Debug\JobDiary.exe.config
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\bin\Debug\JobDiary.exe
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\bin\Debug\JobDiary.pdb
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\obj\Debug\DailyCallingRecord.csprojResolveAssemblyReference.cache
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\obj\Debug\JobDiary.Properties.Resources.resources
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\obj\Debug\DailyCallingRecord.csproj.GenerateResource.Cache
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\obj\Debug\JobDiary.exe
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\obj\Debug\JobDiary.pdb
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\obj\Debug\DailyCallingRecord.MainForm.resources
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\bin\Debug\Telerik.WinControls.dll
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\bin\Debug\Telerik.WinControls.UI.dll
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\bin\Debug\TelerikCommon.dll
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\bin\Debug\Telerik.WinControls.xml
+D:\品誌\OneDrive\CCGH-CSharpDevelop\DailyCallingRecord\DailyCallingRecord\bin\Debug\Telerik.WinControls.UI.xml
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\bin\Debug\JobDiary.exe.config
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\JobDiary.exe
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\JobDiary.pdb
