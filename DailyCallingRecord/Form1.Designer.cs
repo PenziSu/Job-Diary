@@ -41,10 +41,13 @@
             this.GetEventTime = new System.Windows.Forms.Button();
             this.textBoxGetEventTime = new System.Windows.Forms.TextBox();
             this.ForwardToPartner = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxEventDescription = new System.Windows.Forms.TextBox();
             this.comboBoxAppMenu = new System.Windows.Forms.ComboBox();
             this.EventEndTime = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonSend = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -85,6 +88,8 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 308);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(604, 22);
@@ -144,14 +149,15 @@
             this.ForwardToPartner.TabIndex = 19;
             this.ForwardToPartner.Text = "轉二線時間";
             this.ForwardToPartner.UseVisualStyleBackColor = true;
+            this.ForwardToPartner.Click += new System.EventHandler(this.ForwardToPartner_Click);
             // 
-            // textBox6
+            // textBoxEventDescription
             // 
-            this.textBox6.Location = new System.Drawing.Point(227, 27);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(365, 224);
-            this.textBox6.TabIndex = 20;
+            this.textBoxEventDescription.Location = new System.Drawing.Point(227, 27);
+            this.textBoxEventDescription.Multiline = true;
+            this.textBoxEventDescription.Name = "textBoxEventDescription";
+            this.textBoxEventDescription.Size = new System.Drawing.Size(365, 224);
+            this.textBoxEventDescription.TabIndex = 20;
             // 
             // comboBoxAppMenu
             // 
@@ -184,24 +190,35 @@
             this.EventEndTime.UseVisualStyleBackColor = true;
             this.EventEndTime.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // buttonSend
             // 
-            this.button4.Location = new System.Drawing.Point(483, 257);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 37);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "送   出";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonSend.Location = new System.Drawing.Point(483, 257);
+            this.buttonSend.Name = "buttonSend";
+            this.buttonSend.Size = new System.Drawing.Size(109, 37);
+            this.buttonSend.TabIndex = 23;
+            this.buttonSend.Text = "送   出";
+            this.buttonSend.UseVisualStyleBackColor = true;
+            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(47, 17);
+            this.toolStripStatusLabel1.Text = "Ready.";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 330);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.EventEndTime);
             this.Controls.Add(this.comboBoxAppMenu);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxEventDescription);
             this.Controls.Add(this.ForwardToPartner);
             this.Controls.Add(this.textBoxGetEventTime);
             this.Controls.Add(this.GetEventTime);
@@ -220,6 +237,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Job Diary";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,10 +257,12 @@
         private System.Windows.Forms.Button GetEventTime;
         private System.Windows.Forms.TextBox textBoxGetEventTime;
         private System.Windows.Forms.Button ForwardToPartner;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxEventDescription;
         private System.Windows.Forms.ComboBox comboBoxAppMenu;
         private System.Windows.Forms.Button EventEndTime;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 
