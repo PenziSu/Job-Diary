@@ -62,8 +62,12 @@ namespace DailyCallingRecord
             FileStream file = new FileStream(@"C:\Users\Penzi Su\Source\Repos\Job-Diary\Data\JobDiary.xls",FileMode.Create);
             wb.Write(file);
             file.Close();
+
+            /*資料寫入DataTable*/
             MakeDataTableAndDisplay(textBoxGetEventTime.Text,textBoxEID.Text,textBoxExt.Text, comboBoxAppMenu.Text,textBoxEventDescription.Text
                 ,textBoxEndEventTime.Text,textBoxForwordToPartnet.Text);
+
+            /*狀態列敘述改變*/
             toolStripStatusLabel1.Text = "Done!";
         }
 
@@ -75,6 +79,7 @@ namespace DailyCallingRecord
         private void MakeDataTableAndDisplay(string EventTime, string EID, string ExtNum, 
             string ApplicationType, string IssueDesc, string IssueEndTime, string ForwordToPartner)
         {
+            /*目前這個方法只會執行一次，寫入一筆資料而已。*/
             // Create new DataTable.
             DataTable table = new DataTable();
 
@@ -91,10 +96,8 @@ namespace DailyCallingRecord
                 table.Columns.Add(column);
             }                        
 
-            // Create new DataRow objects and add to DataTable.    
-            
-            row = table.NewRow();
-            //"報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援"
+            // Create new DataRow objects and add to DataTable.                
+            row = table.NewRow();            
             row["報修時間"] = EventTime;
             row["員工編號"] = EID;
             row["分機號碼"] = ExtNum;
