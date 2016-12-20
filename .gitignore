@@ -1,0 +1,8 @@
+#*.gitignore
+*.xls
+*.txt
+*.exe
+*.pdb
+Job-Diary\DailyCallingRecord\bin\Debug\*.exe
+DailyCallingRecord\bin\Debug\*.pdb
+Job-Diary/Data/*.xls
