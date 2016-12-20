@@ -47,3 +47,11 @@ C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OpenX
 C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.xml
 C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OOXML.xml
 C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OpenXml4Net.xml
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.dll
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OOXML.dll
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OpenXml4Net.dll
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.xml
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OOXML.xml
+D:\GitHubFolder\Job-Diary\DailyCallingRecord\bin\Debug\NPOI.OpenXml4Net.xml

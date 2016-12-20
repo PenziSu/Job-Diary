@@ -24,6 +24,8 @@ namespace DailyCallingRecord
     {
 
         string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
+        //string xlsFilePath = "C:\Users\Penzi Su\Source\Repos\Job-Diary\Data\JobDiary.xls";
+        //string xlsFilePath = "D:\GitHubFolder\Job-Diary\Data\JobDiary.xls";
 
         public MainForm()
         {
@@ -59,7 +61,7 @@ namespace DailyCallingRecord
             {
                 ws.GetRow(0).CreateCell(i).SetCellValue(columnTitle[i]);
             }
-            FileStream file = new FileStream(@"C:\Users\Penzi Su\Source\Repos\Job-Diary\Data\JobDiary.xls",FileMode.Create);
+            FileStream file = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Create);
             wb.Write(file);
             file.Close();
 
