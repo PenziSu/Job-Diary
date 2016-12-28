@@ -48,6 +48,7 @@
             this.buttonSend = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
+            this.btnOpenFile = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +102,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(46, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(47, 17);
             this.toolStripStatusLabel1.Text = "Ready.";
             // 
             // textBoxEID
@@ -203,7 +204,7 @@
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(109, 37);
             this.buttonSend.TabIndex = 23;
-            this.buttonSend.Text = "送   出";
+            this.buttonSend.Text = "儲存";
             this.buttonSend.UseVisualStyleBackColor = true;
             this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
             // 
@@ -220,11 +221,23 @@
             this.dataGrid1.Size = new System.Drawing.Size(728, 321);
             this.dataGrid1.TabIndex = 24;
             // 
+            // btnOpenFile
+            // 
+            this.btnOpenFile.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnOpenFile.Location = new System.Drawing.Point(127, 260);
+            this.btnOpenFile.Name = "btnOpenFile";
+            this.btnOpenFile.Size = new System.Drawing.Size(95, 35);
+            this.btnOpenFile.TabIndex = 25;
+            this.btnOpenFile.Text = "開啟舊檔";
+            this.btnOpenFile.UseVisualStyleBackColor = true;
+            this.btnOpenFile.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 660);
+            this.Controls.Add(this.btnOpenFile);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.EventEndTime);
@@ -275,6 +288,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.DataGridView dataGrid1;
+        private System.Windows.Forms.Button btnOpenFile;
     }
 }
 

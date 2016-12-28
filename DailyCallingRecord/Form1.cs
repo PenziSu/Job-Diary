@@ -24,9 +24,11 @@ namespace DailyCallingRecord
     {
 
         string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
-        //string xlsFilePath = "C:\Users\Penzi Su\Source\Repos\Job-Diary\Data\JobDiary.xls";
-        //string xlsFilePath = "D:\GitHubFolder\Job-Diary\Data\JobDiary.xls";
-        
+        string hostname = System.Net.Dns.GetHostName();
+        IWorkbook wb = new HSSFWorkbook();
+        HSSFWorkbook oldXlsFile;
+        FileStream file = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Create);
+        int newfile = 0;
 
         public MainForm()
         {
@@ -58,19 +60,22 @@ namespace DailyCallingRecord
         private void buttonSend_Click(object sender, EventArgs e)
         {
             /*變數宣告區*/
-            IWorkbook wb = new HSSFWorkbook();
-            ISheet ws = wb.CreateSheet("Job Diary");
-            string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" } ;            
-            // Create new DataTable.
-            DataTable table = new DataTable();
-
-
-            ws.CreateRow(0);
-            for (int i = 0; i <= 6; i++)
+            //IWorkbook wb = new HSSFWorkbook(); - 移到開頭
+            ISheet ws ;
+            DataTable table = new DataTable(); ;            
+            if (newfile < 1)
             {
-                ws.GetRow(0).CreateCell(i).SetCellValue(columnTitle[i]);
+                ws = wb.CreateSheet("Job Diary");                
+                string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
+                ws.CreateRow(0);
+                for (int i = 0; i <= 6; i++)
+                {
+                    ws.GetRow(0).CreateCell(i).SetCellValue(columnTitle[i]);
+                }
+                newfile += 1;
             }
-                        
+            ws = wb.GetSheet("Job Diary");
+                       
             //計算並呈現資料列數            
             //MessageBox.Show("New Row = "+getNewRow(ws).ToString());
             //資料寫入新列
@@ -95,10 +100,11 @@ namespace DailyCallingRecord
 
             /*DataTable寫入Excel檔案*/
             DataTableToExcelFile(table,ws);
-            /*寫入檔案*/
-            FileStream file = new FileStream(@"C:\Users\Penzi Su\Source\Repos\Job-Diary\Data\JobDiary.xls", FileMode.Create);
+
+            /*寫入檔案*/            
             wb.Write(file);
             file.Close();
+
             /*狀態列敘述改變*/
             toolStripStatusLabel1.Text = "Done.";
         }
@@ -155,6 +161,14 @@ namespace DailyCallingRecord
                     ws.GetRow(i + 1).CreateCell(j).SetCellValue(dt.Rows[i][j].ToString());
                 }
             }            
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {            
+            using (FileStream file = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Open, FileAccess.Read))
+            {
+                oldXlsFile = new HSSFWorkbook(file);
+            }
         }
     }
 }
