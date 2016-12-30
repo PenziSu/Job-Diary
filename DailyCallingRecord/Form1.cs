@@ -23,8 +23,7 @@ namespace DailyCallingRecord
 {
     public partial class MainForm : Form
     {
-        SaveToFile sf = new SaveToFile();
-
+        SaveToFile sf = new SaveToFile();        
 
         public MainForm()
         {
@@ -54,78 +53,28 @@ namespace DailyCallingRecord
         }
 
         private void buttonSend_Click(object sender, EventArgs e)
-        {
-            /*           
-            ISheet ws ;
-            DataTable table = new DataTable(); ;            
-            if (newfile < 1)
-            {
-                ws = wb.CreateSheet("Job Diary");                
-                string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
-                ws.CreateRow(0);
-                for (int i = 0; i <= 6; i++)
-                {
-                    ws.GetRow(0).CreateCell(i).SetCellValue(columnTitle[i]);
-                }
-                newfile += 1;
-            }
-            ws = wb.GetSheet("Job Diary");
-                       
-            //計算並呈現資料列數            
-            //MessageBox.Show("New Row = "+getNewRow(ws).ToString());
-            //資料寫入新列
-            int newRow = ws.LastRowNum + 1;
-            if (newRow > 0) {                
-                ws.CreateRow(newRow); 
-                for (int i = 0; i <= 6; i++)
-                {
-                    ws.GetRow(newRow).CreateCell(i).SetCellValue(columnTitle[i]);
-                }
-            }
-            資料寫入DataTable
-            MakeDataTableAndDisplay(table,
-                                    textBoxGetEventTime.Text,
-                                    textBoxEID.Text,
-                                    textBoxExt.Text, 
-                                    comboBoxAppMenu.Text,
-                                    textBoxEventDescription.Text,
-                                    textBoxEndEventTime.Text,
-                                    textBoxForwordToPartnet.Text
-                                    );*/
+        {                                 
+            /*呈現資料*/
+            ShowData();
+            /*寫入檔案*/
+            //sf.SetData(textBoxGetEventTime.Text,
+            //           textBoxEID.Text,
+            //           textBoxExt.Text,
+            //           comboBoxAppMenu.Text,
+            //           textBoxEventDescription.Text,
+            //           textBoxEndEventTime.Text,
+            //           textBoxForwordToPartnet.Text);
+            //sf.WriteToFile();
 
-            /*DataTable寫入Excel檔案
-            DataTableToExcelFile(table,ws);*/
-
-            /*寫入檔案            
-            wb.Write(file);
-            file.Close();*/            
-            sf.SetData(textBoxGetEventTime.Text,
-                       textBoxEID.Text,
-                       textBoxExt.Text,
-                       comboBoxAppMenu.Text,
-                       textBoxEventDescription.Text,
-                       textBoxEndEventTime.Text,
-                       textBoxForwordToPartnet.Text);
-            sf.WriteToFile();            
-            /*呈現資料                        
-             * DisplayData dd = new DisplayData();
             /*狀態列敘述改變*/
             toolStripStatusLabel1.Text = "Done.";
-        }
+        }              
 
-        /*private int getNewRow(ISheet sheet)
-        {
-            int count = sheet.LastRowNum;
-            count += 1;            
-            int NewRow = count + 1;
-            return NewRow;            
-        }*/                
-
-        private void button1_Click_2(object sender, EventArgs e)
+        private void OpenSavedFile_click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "text|*.txt";
-            openFileDialog1.Title = "Select a text file";
+            openFileDialog1.Filter = "All|*.*";
+            openFileDialog1.Title = "Select a file";
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {                
                 sf.txtFile = openFileDialog1.FileName;
@@ -135,6 +84,42 @@ namespace DailyCallingRecord
 
         private void button1_Click_1(object sender, EventArgs e)
         {            
+
+        }
+        private void ShowData()
+        {
+            /*資料寫入DataTable*/
+
+            //string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
+            //DataTable dt = new DataTable();
+            //DataRow row;
+            //DataColumn column = new DataColumn() ;
+            //column.DataType = Type.GetType("System.String");            
+
+            //// Create second column.
+            //for (int i = 0; i <= 6; i++)
+            //{
+            //    column = new DataColumn();
+            //    column.DataType = Type.GetType("System.String");
+            //    column.ColumnName = columnTitle[i];
+            //    dt.Columns.Add(column);
+            //}
+            //// Create new DataRow objects and add to DataTable.                
+            //row = dt.NewRow();            
+            //row["報修時間"] = textBoxGetEventTime.Text;
+            //row["員工編號"] = textBoxEID.Text;
+            //row["分機號碼"] = textBoxExt.Text;
+            //row["系統分類"] = comboBoxAppMenu.Text;
+            //row["問題敘述"] = textBoxEventDescription.Text;
+            //row["結案時間"] = textBoxEndEventTime.Text;
+            //row["二線支援"] = textBoxForwordToPartnet.Text;
+            //dt.Rows.Add(row);
+            //// Set to DataGrid.DataSource property to the table.
+            //dataGrid1.DataSource = dt;
+        }
+
+        private void dataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

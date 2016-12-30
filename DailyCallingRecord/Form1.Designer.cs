@@ -50,6 +50,13 @@
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.SuspendLayout();
@@ -216,11 +223,20 @@
             // dataGrid1
             // 
             this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
             this.dataGrid1.Location = new System.Drawing.Point(12, 300);
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.RowTemplate.Height = 24;
             this.dataGrid1.Size = new System.Drawing.Size(728, 321);
             this.dataGrid1.TabIndex = 24;
+            this.dataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid1_CellContentClick);
             // 
             // btnOpenFile
             // 
@@ -231,11 +247,46 @@
             this.btnOpenFile.TabIndex = 25;
             this.btnOpenFile.Text = "開啟舊檔";
             this.btnOpenFile.UseVisualStyleBackColor = true;
-            this.btnOpenFile.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnOpenFile.Click += new System.EventHandler(this.OpenSavedFile_click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Column7";
+            this.Column7.Name = "Column7";
             // 
             // MainForm
             // 
@@ -295,6 +346,13 @@
         private System.Windows.Forms.DataGridView dataGrid1;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
 
