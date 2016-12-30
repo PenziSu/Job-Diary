@@ -51,8 +51,14 @@ namespace JobDiary
         {
             string[] lines = {issueTime,employeeID,extNumber,applicationName,issueDescription,closeTime,secLineReceiver };           
             string issue = issueTime+','+employeeID + ',' + extNumber + ',' + applicationName + ',' + issueDescription + ',' + closeTime + ',' + secLineReceiver;
-
-            //using (System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"D:\GitHubFolder\Job-Diary\Data\WriteDataToText.txt",true))
+            if (txtFile == "")
+            {
+                txtFile = "D:/GitHubFolder/Job-Diary/Data/WriteDataToText.txt";
+            }else
+            {
+                /*txtFile已經有值*/
+            }            
+            
             using (System.IO.StreamWriter file2 = new System.IO.StreamWriter(txtFile, true))
             {
                 file2.WriteLine(issue);

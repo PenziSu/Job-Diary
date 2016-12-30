@@ -129,6 +129,7 @@ namespace DailyCallingRecord
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {                
                 sf.txtFile = openFileDialog1.FileName;
+                toolStripStatusLabel1.Text = "開啟舊檔" + openFileDialog1.FileName;
             }                                       
         }
 
