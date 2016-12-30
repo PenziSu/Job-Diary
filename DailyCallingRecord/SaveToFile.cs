@@ -46,12 +46,13 @@ namespace JobDiary
             issueDescription = EventDescription;
             closeTime        = EndEventTime;
             secLineReceiver  = ForwardToPartnet;            
+            
         }
         public void WriteToFile()
         {
             string[] lines = {issueTime,employeeID,extNumber,applicationName,issueDescription,closeTime,secLineReceiver };           
             string issue = issueTime+','+employeeID + ',' + extNumber + ',' + applicationName + ',' + issueDescription + ',' + closeTime + ',' + secLineReceiver;
-            if (txtFile == "")
+            if (txtFile == "" || txtFile == null)
             {
                 txtFile = "D:/GitHubFolder/Job-Diary/Data/WriteDataToText.txt";
             }else
