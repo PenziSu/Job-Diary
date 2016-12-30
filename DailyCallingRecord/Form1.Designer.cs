@@ -64,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 66);
+            this.label2.Location = new System.Drawing.Point(222, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 2;
@@ -73,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 115);
+            this.label3.Location = new System.Drawing.Point(437, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 12);
             this.label3.TabIndex = 3;
@@ -82,7 +82,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(225, 12);
+            this.label4.Location = new System.Drawing.Point(16, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 4;
@@ -91,7 +91,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 157);
+            this.label8.Location = new System.Drawing.Point(16, 60);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 12);
             this.label8.TabIndex = 5;
@@ -101,9 +101,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 638);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 481);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(752, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(768, 22);
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -115,28 +115,28 @@
             // 
             // textBoxEID
             // 
-            this.textBoxEID.Location = new System.Drawing.Point(101, 63);
+            this.textBoxEID.Location = new System.Drawing.Point(313, 12);
             this.textBoxEID.Name = "textBoxEID";
             this.textBoxEID.Size = new System.Drawing.Size(100, 22);
             this.textBoxEID.TabIndex = 10;
             // 
             // textBoxExt
             // 
-            this.textBoxExt.Location = new System.Drawing.Point(101, 112);
+            this.textBoxExt.Location = new System.Drawing.Point(528, 12);
             this.textBoxExt.Name = "textBoxExt";
             this.textBoxExt.Size = new System.Drawing.Size(100, 22);
             this.textBoxExt.TabIndex = 11;
             // 
             // textBoxEndEventTime
             // 
-            this.textBoxEndEventTime.Location = new System.Drawing.Point(101, 189);
+            this.textBoxEndEventTime.Location = new System.Drawing.Point(313, 54);
             this.textBoxEndEventTime.Name = "textBoxEndEventTime";
             this.textBoxEndEventTime.Size = new System.Drawing.Size(100, 22);
             this.textBoxEndEventTime.TabIndex = 13;
             // 
             // textBoxForwordToPartnet
             // 
-            this.textBoxForwordToPartnet.Location = new System.Drawing.Point(101, 229);
+            this.textBoxForwordToPartnet.Location = new System.Drawing.Point(528, 55);
             this.textBoxForwordToPartnet.Name = "textBoxForwordToPartnet";
             this.textBoxForwordToPartnet.Size = new System.Drawing.Size(100, 22);
             this.textBoxForwordToPartnet.TabIndex = 14;
@@ -160,7 +160,7 @@
             // 
             // ForwardToPartner
             // 
-            this.ForwardToPartner.Location = new System.Drawing.Point(12, 229);
+            this.ForwardToPartner.Location = new System.Drawing.Point(439, 55);
             this.ForwardToPartner.Name = "ForwardToPartner";
             this.ForwardToPartner.Size = new System.Drawing.Size(75, 23);
             this.ForwardToPartner.TabIndex = 19;
@@ -170,10 +170,9 @@
             // 
             // textBoxEventDescription
             // 
-            this.textBoxEventDescription.Location = new System.Drawing.Point(227, 27);
-            this.textBoxEventDescription.Multiline = true;
+            this.textBoxEventDescription.Location = new System.Drawing.Point(101, 106);
             this.textBoxEventDescription.Name = "textBoxEventDescription";
-            this.textBoxEventDescription.Size = new System.Drawing.Size(513, 224);
+            this.textBoxEventDescription.Size = new System.Drawing.Size(312, 22);
             this.textBoxEventDescription.TabIndex = 20;
             // 
             // comboBoxAppMenu
@@ -191,14 +190,14 @@
             "放射科報到系統",
             "放射科報告分派",
             "PACS"});
-            this.comboBoxAppMenu.Location = new System.Drawing.Point(101, 154);
+            this.comboBoxAppMenu.Location = new System.Drawing.Point(107, 57);
             this.comboBoxAppMenu.Name = "comboBoxAppMenu";
-            this.comboBoxAppMenu.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxAppMenu.Size = new System.Drawing.Size(100, 20);
             this.comboBoxAppMenu.TabIndex = 21;
             // 
             // EventEndTime
             // 
-            this.EventEndTime.Location = new System.Drawing.Point(12, 189);
+            this.EventEndTime.Location = new System.Drawing.Point(224, 54);
             this.EventEndTime.Name = "EventEndTime";
             this.EventEndTime.Size = new System.Drawing.Size(75, 23);
             this.EventEndTime.TabIndex = 22;
@@ -208,7 +207,7 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(12, 258);
+            this.buttonSend.Location = new System.Drawing.Point(568, 97);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(109, 37);
             this.buttonSend.TabIndex = 23;
@@ -231,19 +230,19 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGrid1.Location = new System.Drawing.Point(12, 300);
+            this.dataGrid1.Location = new System.Drawing.Point(12, 140);
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.RowTemplate.Height = 24;
-            this.dataGrid1.Size = new System.Drawing.Size(728, 321);
+            this.dataGrid1.Size = new System.Drawing.Size(745, 329);
             this.dataGrid1.TabIndex = 24;
             this.dataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid1_CellContentClick);
             // 
             // btnOpenFile
             // 
             this.btnOpenFile.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnOpenFile.Location = new System.Drawing.Point(127, 260);
+            this.btnOpenFile.Location = new System.Drawing.Point(439, 97);
             this.btnOpenFile.Name = "btnOpenFile";
-            this.btnOpenFile.Size = new System.Drawing.Size(95, 35);
+            this.btnOpenFile.Size = new System.Drawing.Size(109, 37);
             this.btnOpenFile.TabIndex = 25;
             this.btnOpenFile.Text = "開啟舊檔";
             this.btnOpenFile.UseVisualStyleBackColor = true;
@@ -255,44 +254,44 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Column1";
+            this.Column1.HeaderText = "報修時間";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Column2";
+            this.Column2.HeaderText = "員工編號";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Column3";
+            this.Column3.HeaderText = "分機號碼";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Column4";
+            this.Column4.HeaderText = "程式分類";
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Column5";
+            this.Column5.HeaderText = "結案時間";
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Column6";
+            this.Column6.HeaderText = "轉接二線";
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Column7";
+            this.Column7.HeaderText = "問題描述";
             this.Column7.Name = "Column7";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 660);
+            this.ClientSize = new System.Drawing.Size(768, 503);
             this.Controls.Add(this.btnOpenFile);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.buttonSend);

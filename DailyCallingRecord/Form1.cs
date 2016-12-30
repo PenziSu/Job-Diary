@@ -57,14 +57,14 @@ namespace DailyCallingRecord
             /*呈現資料*/
             ShowData();
             /*寫入檔案*/
-            //sf.SetData(textBoxGetEventTime.Text,
-            //           textBoxEID.Text,
-            //           textBoxExt.Text,
-            //           comboBoxAppMenu.Text,
-            //           textBoxEventDescription.Text,
-            //           textBoxEndEventTime.Text,
-            //           textBoxForwordToPartnet.Text);
-            //sf.WriteToFile();
+            sf.SetData(textBoxGetEventTime.Text,
+                       textBoxEID.Text,
+                       textBoxExt.Text,
+                       comboBoxAppMenu.Text,
+                       textBoxEventDescription.Text,
+                       textBoxEndEventTime.Text,
+                       textBoxForwordToPartnet.Text);
+            sf.WriteToFile();
 
             /*狀態列敘述改變*/
             toolStripStatusLabel1.Text = "Done.";
@@ -89,33 +89,16 @@ namespace DailyCallingRecord
         private void ShowData()
         {
             /*資料寫入DataTable*/
-
-            //string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
-            //DataTable dt = new DataTable();
-            //DataRow row;
-            //DataColumn column = new DataColumn() ;
-            //column.DataType = Type.GetType("System.String");            
-
-            //// Create second column.
-            //for (int i = 0; i <= 6; i++)
-            //{
-            //    column = new DataColumn();
-            //    column.DataType = Type.GetType("System.String");
-            //    column.ColumnName = columnTitle[i];
-            //    dt.Columns.Add(column);
-            //}
-            //// Create new DataRow objects and add to DataTable.                
-            //row = dt.NewRow();            
-            //row["報修時間"] = textBoxGetEventTime.Text;
-            //row["員工編號"] = textBoxEID.Text;
-            //row["分機號碼"] = textBoxExt.Text;
-            //row["系統分類"] = comboBoxAppMenu.Text;
-            //row["問題敘述"] = textBoxEventDescription.Text;
-            //row["結案時間"] = textBoxEndEventTime.Text;
-            //row["二線支援"] = textBoxForwordToPartnet.Text;
-            //dt.Rows.Add(row);
-            //// Set to DataGrid.DataSource property to the table.
-            //dataGrid1.DataSource = dt;
+            string[] lines = {textBoxGetEventTime.Text,
+                              textBoxEID.Text,
+                              textBoxExt.Text,
+                              comboBoxAppMenu.Text,
+                              textBoxEventDescription.Text,
+                              textBoxEndEventTime.Text,
+                              textBoxForwordToPartnet.Text
+            };
+            DataGridViewRowCollection rows = dataGrid1.Rows;
+            rows.Add(lines);
         }
 
         private void dataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
