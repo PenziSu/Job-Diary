@@ -316,6 +316,7 @@
             this.btnOpenXlsFile.TabIndex = 27;
             this.btnOpenXlsFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOpenXlsFile.UseVisualStyleBackColor = true;
+            this.btnOpenXlsFile.Click += new System.EventHandler(this.btnOpenXlsFile_Click);
             // 
             // MainForm
             // 

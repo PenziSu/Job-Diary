@@ -98,5 +98,10 @@ namespace DailyCallingRecord
         {
 
         }
+
+        private void btnOpenXlsFile_Click(object sender, EventArgs e)
+        {
+            sf.WriteToExcel();
+        }
     }
 }

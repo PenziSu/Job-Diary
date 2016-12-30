@@ -74,36 +74,68 @@ namespace JobDiary
         }
         public void WriteToExcel()
         {
-            /*資料寫入Excel檔案*/                        
-            FileStream xlsFile = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Create);
-            int newfile = 0;
-            ISheet ws;            
-            if (newfile < 1)
+            /*資料寫入Excel檔案*/
+            HSSFWorkbook wb;
+            //using (FileStream file = new FileStream(AppDomain.CurrentDomain.BaseDirectory+ "JobDiary.xls", FileMode.Open, FileAccess.Read))
+            using (FileStream file = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Open, FileAccess.Read))
             {
-                ws = wb.CreateSheet("Job Diary");                
-                ws.CreateRow(0);
-                for (int i = 0; i <= 6; i++)
-                {
-                    ws.GetRow(0).CreateCell(i).SetCellValue(columnTitle[i]);
-                }
-                newfile += 1;
+                wb = new HSSFWorkbook(file);
             }
-            ws = wb.GetSheet("Job Diary");
-            //計算並呈現資料列數            
-            //MessageBox.Show("New Row = "+getNewRow(ws).ToString());
-            //資料寫入新列
-            int newRow = ws.LastRowNum + 1;
-            if (newRow > 0)
+            var jd = wb.GetSheet("Job Diary");
+            //MessageBox.Show(Convert.ToString(jd.LastRowNum));
+            if (jd.LastRowNum >= 0)
             {
-                ws.CreateRow(newRow);
-                for (int i = 0; i <= 6; i++)
-                {
-                    ws.GetRow(newRow).CreateCell(i).SetCellValue(columnTitle[i]);
-                }
-            }            
-            /*寫入檔案*/
-            wb.Write(xlsFile);
-            xlsFile.Close();
+                int newRow;
+                newRow = jd.LastRowNum + 1;
+                MessageBox.Show("Fuck you Recycle.");
+                MessageBox.Show(Convert.ToString(newRow));
+                HSSFRow row = jd.GetRow();
+            }
+            //for (int row = 0; row <= sheet.LastRowNum; row++)
+            //{
+            //    if (sheet.GetRow(row) != null)
+            //    {
+            //        foreach (var c in sheet.GetRow(row).Cells)
+            //        {
+            //            if (c.CellType == CellType.String)
+            //            {
+            //                MessageBox.Show(c.StringCellValue);
+            //            }
+            //        }
+            //    }
+            //}
+
+                //FileStream xlsFile = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Create);
+
+
+                //int newfile = 0;
+                //ISheet ws;            
+                //if (newfile < 1)
+                //{
+                //    ws = wb.CreateSheet("Job Diary");                
+                //    ws.CreateRow(0);
+                //    for (int i = 0; i <= 6; i++)
+                //    {
+                //        ws.GetRow(0).CreateCell(i).SetCellValue(columnTitle[i]);
+                //    }
+                //    newfile += 1;
+                //}
+                //ws = wb.GetSheet("Job Diary");
+                ////計算並呈現資料列數            
+                ////MessageBox.Show("New Row = "+getNewRow(ws).ToString());
+                ////資料寫入新列
+                //int newRow = ws.LastRowNum + 1;
+                //if (newRow > 0)
+                //{
+                //    ws.CreateRow(newRow);
+                //    for (int i = 0; i <= 6; i++)
+                //    {
+                //        ws.GetRow(newRow).CreateCell(i).SetCellValue(columnTitle[i]);
+                //    }
+                //}            
+                ///*寫入檔案*/
+                //wb.Write(xlsFile);
+                //xlsFile.Close();
         }                         
     }
 }
