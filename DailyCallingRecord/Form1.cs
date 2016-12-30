@@ -120,7 +120,14 @@ namespace DailyCallingRecord
         }*/                
 
         private void button1_Click_2(object sender, EventArgs e)
-        {                        
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "text|*.txt";
+            openFileDialog1.Title = "Select a text file";
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {                
+                textBoxEventDescription.Text = openFileDialog1.FileName;
+            }                                       
         }
 
         private void button1_Click_1(object sender, EventArgs e)

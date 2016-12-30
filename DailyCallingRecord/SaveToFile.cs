@@ -48,6 +48,13 @@ namespace JobDiary
         }
         public void WriteToFile()
         {
+            string[] lines = {issueTime,employeeID,extNumber,applicationName,issueDescription,closeTime,secLineReceiver };           
+            string issue = issueTime+','+employeeID + ',' + extNumber + ',' + applicationName + ',' + issueDescription + ',' + closeTime + ',' + secLineReceiver;                       
+
+            using (System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"D:\GitHubFolder\Job-Diary\Data\WriteDataToText.txt",true))
+            {
+                file2.WriteLine(issue);
+            }
             /*執行檔案寫入
             string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
             IWorkbook wb = new HSSFWorkbook();
