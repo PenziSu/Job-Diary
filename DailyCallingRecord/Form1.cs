@@ -22,7 +22,10 @@ using JobDiary;
 namespace DailyCallingRecord
 {
     public partial class MainForm : Form
-    {        
+    {
+        SaveToFile sf = new SaveToFile();
+
+
         public MainForm()
         {
             InitializeComponent();
@@ -95,8 +98,7 @@ namespace DailyCallingRecord
 
             /*寫入檔案            
             wb.Write(file);
-            file.Close();*/
-            SaveToFile sf = new SaveToFile();
+            file.Close();*/            
             sf.SetData(textBoxGetEventTime.Text,
                        textBoxEID.Text,
                        textBoxExt.Text,
@@ -126,7 +128,7 @@ namespace DailyCallingRecord
             openFileDialog1.Title = "Select a text file";
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {                
-                textBoxEventDescription.Text = openFileDialog1.FileName;
+                sf.txtFile = openFileDialog1.FileName;
             }                                       
         }
 

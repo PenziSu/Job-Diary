@@ -15,6 +15,7 @@ namespace JobDiary
     public class SaveToFile
     {
         public string xlsFile;
+        public string txtFile;
         /* "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援"*/
         public string issueTime;
         public string employeeID;
@@ -49,9 +50,10 @@ namespace JobDiary
         public void WriteToFile()
         {
             string[] lines = {issueTime,employeeID,extNumber,applicationName,issueDescription,closeTime,secLineReceiver };           
-            string issue = issueTime+','+employeeID + ',' + extNumber + ',' + applicationName + ',' + issueDescription + ',' + closeTime + ',' + secLineReceiver;                       
+            string issue = issueTime+','+employeeID + ',' + extNumber + ',' + applicationName + ',' + issueDescription + ',' + closeTime + ',' + secLineReceiver;
 
-            using (System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"D:\GitHubFolder\Job-Diary\Data\WriteDataToText.txt",true))
+            //using (System.IO.StreamWriter file2 = new System.IO.StreamWriter(@"D:\GitHubFolder\Job-Diary\Data\WriteDataToText.txt",true))
+            using (System.IO.StreamWriter file2 = new System.IO.StreamWriter(txtFile, true))
             {
                 file2.WriteLine(issue);
             }
