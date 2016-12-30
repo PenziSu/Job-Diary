@@ -16,20 +16,13 @@ using NPOI;
 using NPOI.HSSF.UserModel;
 using NPOI.XSSF.UserModel;
 using NPOI.SS.UserModel;
-
+//Using Class
+using JobDiary;
 
 namespace DailyCallingRecord
 {
     public partial class MainForm : Form
-    {
-
-        string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
-        string hostname = System.Net.Dns.GetHostName();
-        IWorkbook wb = new HSSFWorkbook();
-        HSSFWorkbook oldXlsFile;
-        FileStream file = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Create);
-        int newfile = 0;
-
+    {        
         public MainForm()
         {
             InitializeComponent();
@@ -59,8 +52,7 @@ namespace DailyCallingRecord
 
         private void buttonSend_Click(object sender, EventArgs e)
         {
-            /*變數宣告區*/
-            //IWorkbook wb = new HSSFWorkbook(); - 移到開頭
+            /*           
             ISheet ws ;
             DataTable table = new DataTable(); ;            
             if (newfile < 1)
@@ -87,7 +79,7 @@ namespace DailyCallingRecord
                     ws.GetRow(newRow).CreateCell(i).SetCellValue(columnTitle[i]);
                 }
             }
-            /*資料寫入DataTable*/
+            資料寫入DataTable
             MakeDataTableAndDisplay(table,
                                     textBoxGetEventTime.Text,
                                     textBoxEID.Text,
@@ -96,79 +88,44 @@ namespace DailyCallingRecord
                                     textBoxEventDescription.Text,
                                     textBoxEndEventTime.Text,
                                     textBoxForwordToPartnet.Text
-                                    );
+                                    );*/
 
-            /*DataTable寫入Excel檔案*/
-            DataTableToExcelFile(table,ws);
+            /*DataTable寫入Excel檔案
+            DataTableToExcelFile(table,ws);*/
 
-            /*寫入檔案*/            
+            /*寫入檔案            
             wb.Write(file);
-            file.Close();
-
+            file.Close();*/
+            SaveToFile sf = new SaveToFile();
+            sf.SetData(textBoxGetEventTime.Text,
+                       textBoxEID.Text,
+                       textBoxExt.Text,
+                       comboBoxAppMenu.Text,
+                       textBoxEventDescription.Text,
+                       textBoxEndEventTime.Text,
+                       textBoxForwordToPartnet.Text);
+            sf.WriteToFile();            
+            /*呈現資料                        
+             * DisplayData dd = new DisplayData();
             /*狀態列敘述改變*/
             toolStripStatusLabel1.Text = "Done.";
         }
 
-        private int getNewRow(ISheet sheet)
+        /*private int getNewRow(ISheet sheet)
         {
             int count = sheet.LastRowNum;
             count += 1;            
             int NewRow = count + 1;
             return NewRow;            
-        }
-
-        private void MakeDataTableAndDisplay(DataTable dt,string EventTime, string EID, string ExtNum, 
-            string ApplicationType, string IssueDesc, string IssueEndTime, string ForwordToPartner)
-        {
-            /*目前這個方法只會執行一次，寫入一筆資料而已。*/
-            // Create new DataTable.
-            //DataTable table = new DataTable();
-
-            // Declare DataColumn and DataRow variables.
-            DataColumn column;
-            DataRow row;            
-            // Create second column.
-            for (int i = 0; i <=6; i++)
-            {
-                column = new DataColumn();
-                column.DataType = Type.GetType("System.String");
-                column.ColumnName = columnTitle[i];
-                dt.Columns.Add(column);
-            }
-
-            // Create new DataRow objects and add to DataTable.                
-            row = dt.NewRow();
-            row["報修時間"] = EventTime;
-            row["員工編號"] = EID;
-            row["分機號碼"] = ExtNum;
-            row["系統分類"] = ApplicationType;
-            row["問題敘述"] = IssueDesc;
-            row["結案時間"] = IssueEndTime;
-            row["二線支援"] = ForwordToPartner;
-            dt.Rows.Add(row);            
-            
-            // Set to DataGrid.DataSource property to the table.
-            dataGrid1.DataSource = dt;            
-        }
-
-        private void DataTableToExcelFile(DataTable dt,ISheet ws)
-        {
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                ws.CreateRow(i + 1);
-                for (int j = 0; j < dt.Columns.Count; j++)
-                {
-                    ws.GetRow(i + 1).CreateCell(j).SetCellValue(dt.Rows[i][j].ToString());
-                }
-            }            
-        }
+        }*/                
 
         private void button1_Click_2(object sender, EventArgs e)
+        {                        
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {            
-            using (FileStream file = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Open, FileAccess.Read))
-            {
-                oldXlsFile = new HSSFWorkbook(file);
-            }
+
         }
     }
 }
