@@ -8,14 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-//參考M$內建Excel
-using Excel = Microsoft.Office.Interop.Excel;
-using System.Reflection;
-//參考Open Source元件
-using NPOI;
-using NPOI.HSSF.UserModel;
-using NPOI.XSSF.UserModel;
-using NPOI.SS.UserModel;
 //Using Class
 using JobDiary;
 
@@ -64,17 +56,18 @@ namespace DailyCallingRecord
                        textBoxEventDescription.Text,
                        textBoxEndEventTime.Text,
                        textBoxForwordToPartnet.Text);
-            sf.WriteToFile();
+            sf.WriteToFile(); //txt
+            sf.WriteToExcel(); //Excel
 
             /*狀態列敘述改變*/
             toolStripStatusLabel1.Text = "Done.";
         }              
 
-        private void OpenSavedFile_click(object sender, EventArgs e)
+        private void btnOpenTxtFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "All|*.*";
-            openFileDialog1.Title = "Select a file";
+            openFileDialog1.Filter = "文字檔|*.txt";
+            openFileDialog1.Title = "Select a text file";
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {                
                 sf.txtFile = openFileDialog1.FileName;

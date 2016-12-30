@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//參考M$內建Excel
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 //參考Open Source元件
 using NPOI;
 using NPOI.HSSF.UserModel;
@@ -71,8 +74,7 @@ namespace JobDiary
         }
         public void WriteToExcel()
         {
-            /*資料寫入Excel檔案*/            
-            HSSFWorkbook oldXlsFile;
+            /*資料寫入Excel檔案*/                        
             FileStream xlsFile = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Create);
             int newfile = 0;
             ISheet ws;            

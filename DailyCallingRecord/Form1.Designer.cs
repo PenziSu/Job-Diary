@@ -48,7 +48,6 @@
             this.buttonSend = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
-            this.btnOpenFile = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,8 +56,12 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnOpenTxtFile = new System.Windows.Forms.Button();
+            this.btnOpenXlsFile = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -172,7 +175,7 @@
             // 
             this.textBoxEventDescription.Location = new System.Drawing.Point(101, 106);
             this.textBoxEventDescription.Name = "textBoxEventDescription";
-            this.textBoxEventDescription.Size = new System.Drawing.Size(312, 22);
+            this.textBoxEventDescription.Size = new System.Drawing.Size(527, 22);
             this.textBoxEventDescription.TabIndex = 20;
             // 
             // comboBoxAppMenu
@@ -207,7 +210,7 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(568, 97);
+            this.buttonSend.Location = new System.Drawing.Point(647, 91);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(109, 37);
             this.buttonSend.TabIndex = 23;
@@ -236,17 +239,6 @@
             this.dataGrid1.Size = new System.Drawing.Size(745, 329);
             this.dataGrid1.TabIndex = 24;
             this.dataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid1_CellContentClick);
-            // 
-            // btnOpenFile
-            // 
-            this.btnOpenFile.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnOpenFile.Location = new System.Drawing.Point(439, 97);
-            this.btnOpenFile.Name = "btnOpenFile";
-            this.btnOpenFile.Size = new System.Drawing.Size(109, 37);
-            this.btnOpenFile.TabIndex = 25;
-            this.btnOpenFile.Text = "開啟舊檔";
-            this.btnOpenFile.UseVisualStyleBackColor = true;
-            this.btnOpenFile.Click += new System.EventHandler(this.OpenSavedFile_click);
             // 
             // openFileDialog1
             // 
@@ -287,12 +279,50 @@
             this.Column7.HeaderText = "問題描述";
             this.Column7.Name = "Column7";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnOpenXlsFile);
+            this.groupBox1.Controls.Add(this.btnOpenTxtFile);
+            this.groupBox1.Location = new System.Drawing.Point(647, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(109, 73);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "開啟紀錄檔";
+            // 
+            // btnOpenTxtFile
+            // 
+            this.btnOpenTxtFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOpenTxtFile.BackgroundImage")));
+            this.btnOpenTxtFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOpenTxtFile.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnOpenTxtFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpenTxtFile.Location = new System.Drawing.Point(6, 21);
+            this.btnOpenTxtFile.Name = "btnOpenTxtFile";
+            this.btnOpenTxtFile.Size = new System.Drawing.Size(40, 40);
+            this.btnOpenTxtFile.TabIndex = 26;
+            this.btnOpenTxtFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOpenTxtFile.UseVisualStyleBackColor = true;
+            this.btnOpenTxtFile.Click += new System.EventHandler(this.btnOpenTxtFile_Click);
+            // 
+            // btnOpenXlsFile
+            // 
+            this.btnOpenXlsFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOpenXlsFile.BackgroundImage")));
+            this.btnOpenXlsFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOpenXlsFile.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnOpenXlsFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpenXlsFile.Location = new System.Drawing.Point(63, 20);
+            this.btnOpenXlsFile.Name = "btnOpenXlsFile";
+            this.btnOpenXlsFile.Size = new System.Drawing.Size(40, 40);
+            this.btnOpenXlsFile.TabIndex = 27;
+            this.btnOpenXlsFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOpenXlsFile.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 503);
-            this.Controls.Add(this.btnOpenFile);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.EventEndTime);
@@ -318,6 +348,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,7 +374,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.DataGridView dataGrid1;
-        private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -352,6 +382,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnOpenXlsFile;
+        private System.Windows.Forms.Button btnOpenTxtFile;
     }
 }
 
