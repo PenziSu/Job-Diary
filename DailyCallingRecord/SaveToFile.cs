@@ -27,10 +27,7 @@ namespace JobDiary
         public string applicationName;
         public string issueDescription;
         public string closeTime;
-        public string secLineReceiver;
-        /*宣告Excel變數*/
-        string[] columnTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
-        IWorkbook wb = new HSSFWorkbook();
+        public string secLineReceiver;        
 
         public SaveToFile()
         {
@@ -61,8 +58,10 @@ namespace JobDiary
             string issue = issueTime+','+employeeID + ',' + extNumber + ',' + applicationName + ',' + issueDescription + ',' + closeTime + ',' + secLineReceiver;
             if (txtFile == "" || txtFile == null)
             {
-                txtFile = "D:/GitHubFolder/Job-Diary/Data/WriteDataToText.txt";
-            }else
+                //txtFile = "D:/GitHubFolder/Job-Diary/Data/WriteDataToText.txt"; 公司
+                txtFile = @"C:\Users\Penzi Su\Source\Repos\Job-Diary\Data\WriteDataToText.txt";
+            }
+            else
             {
                 /*txtFile已經有值*/
             }                        
@@ -74,23 +73,78 @@ namespace JobDiary
         }
         public void WriteToExcel()
         {
-            /*資料寫入Excel檔案*/
-            HSSFWorkbook wb;
-            //using (FileStream file = new FileStream(AppDomain.CurrentDomain.BaseDirectory+ "JobDiary.xls", FileMode.Open, FileAccess.Read))
-            using (FileStream file = new FileStream(@"D:\GitHubFolder\Job-Diary\Data\JobDiary.xls", FileMode.Open, FileAccess.Read))
-            {
-                wb = new HSSFWorkbook(file);
+            /*宣告Excel變數*/
+            xlsFile = @"C:\Users\Penzi Su\Source\Repos\Job-Diary\Data\JobDiary.xls";
+            Boolean fileStatus = false;
+            string[] cellTitle = { "報修時間", "員工編號", "分機號碼", "系統分類", "問題敘述", "結案時間", "二線支援" };
+            string[] cellContent = { "1", "2", "3", "4", "5", "6", "7" };
+            IWorkbook wb;
+
+            if (!File.Exists(xlsFile))
+                fileStatus = false;                
+            else            
+                fileStatus = true;                                         
+
+            switch (Convert.ToInt16(fileStatus)){
+                case 0:
+                    {
+                        /*建立Excel檔案*/
+                        MessageBox.Show(Convert.ToInt16(fileStatus)+": 建立檔案");
+                        wb = new HSSFWorkbook();
+                        ISheet ws = wb.CreateSheet("Job Diary");
+                        ws.CreateRow(0);
+                        for (int i = 0; i <= cellTitle.Length -1; i++)
+                        {                            
+                            ws.GetRow(0).CreateCell(i).SetCellValue(cellTitle[i]);
+                        }
+                        FileStream file = new FileStream(xlsFile,FileMode.Create);
+                        wb.Write(file);
+                        //file.Close();
+                        file.Dispose();
+                        break;
+                    }
+                case 1:
+                    {
+                        /*資料寫入Excel檔案*/
+                        //MessageBox.Show(Convert.ToInt16(fileStatus) + ": 寫入檔案");
+                        //using (FileStream xfile = new FileStream(xlsFile, FileMode.Open, FileAccess.Write))
+                        //{                            
+                        //    wb = new HSSFWorkbook(xfile);
+                        //    ISheet JD = wb.GetSheet("Job Diary");
+                        //    int newRow = JD.LastRowNum +1;
+                        //    JD.CreateRow(newRow);
+                        //    //MessageBox.Show("Last Row:" + Convert.ToString(newRow));
+                        //    for (int i = 0; i <= cellTitle.Length - 1; i++)
+                        //    {
+                        //        JD.GetRow(newRow).CreateCell(i).SetCellValue(cellContent[i]);
+                        //    }
+                        //    //FileStream file = new FileStream(xlsFile, FileMode.Open, FileAccess.ReadWrite);
+                        //    wb.Write(xfile);                            
+                        //}
+
+                        FileStream file = new FileStream(xlsFile, FileMode.Open);
+                        MemoryStream ms = new MemoryStream();
+                        wb = new HSSFWorkbook(file);
+                        ISheet JD = wb.GetSheet("Job Diary");
+                        int lastRow = JD.LastRowNum;
+                        JD.CreateRow(lastRow + 1);
+                        //   MessageBox.Show("Last Row:" + Convert.ToString(lastRow + 1));
+                        for (int i = 0; i <= cellTitle.Length - 1; i++)
+                        {
+                            JD.GetRow(lastRow + 1).CreateCell(i).SetCellValue(cellContent[i]);
+                        }
+                        wb.Write(ms);
+                        ms.WriteTo(file);
+                        break;
+                    }
             }
-            var jd = wb.GetSheet("Job Diary");
-            //MessageBox.Show(Convert.ToString(jd.LastRowNum));
-            if (jd.LastRowNum >= 0)
-            {
-                int newRow;
-                newRow = jd.LastRowNum + 1;
-                MessageBox.Show("Fuck you Recycle.");
-                MessageBox.Show(Convert.ToString(newRow));
-                HSSFRow row = jd.GetRow();
-            }
+            
+
+            
+            //ISheet jd = wb.GetSheet("Job Diary");            
+            //IRow row = jd.GetRow(2);
+            //ICell cell = row.GetCell(2);
+            //cell.SetCellValue = 44;
             //for (int row = 0; row <= sheet.LastRowNum; row++)
             //{
             //    if (sheet.GetRow(row) != null)
