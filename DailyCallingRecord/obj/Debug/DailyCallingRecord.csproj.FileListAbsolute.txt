@@ -26,3 +26,6 @@ D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.csproj
 D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.MainForm.resources
 D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\JobDiary.Properties.Resources.resources
 D:\GitHubFolder\Job-Diary\DailyCallingRecord\obj\Debug\DailyCallingRecord.csproj.GenerateResource.Cache
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\bin\Debug\JobDiary.exe.config
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\obj\Debug\JobDiary.exe
+C:\Users\Penzi Su\Source\Repos\Job-Diary\DailyCallingRecord\obj\Debug\JobDiary.pdb
