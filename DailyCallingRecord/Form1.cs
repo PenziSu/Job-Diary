@@ -87,8 +87,8 @@ namespace DailyCallingRecord
                               textBoxExt.Text,
                               comboBoxAppMenu.Text,
                               textBoxEventDescription.Text,
-                              textBoxEndEventTime.Text,
-                              textBoxForwordToPartnet.Text
+                              textBoxForwordToPartnet.Text,
+                              textBoxEndEventTime.Text                          
             };
             DataGridViewRowCollection rows = dataGrid1.Rows;
             rows.Add(lines);
@@ -102,7 +102,52 @@ namespace DailyCallingRecord
         private void btnOpenXlsFile_Click(object sender, EventArgs e)
         {
             /*開啟Excel檔案*/
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "XLS檔|*.xls";
+            openFileDialog1.Title = "Select a xls file";
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                sf.xlsFile = openFileDialog1.FileName;
+                toolStripStatusLabel1.Text = "開啟舊檔" + openFileDialog1.FileName;
+            }
+        }
 
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void OpenSavedFile_Click(object sender, EventArgs e)
+        {
+            /*開啟Excel檔案*/
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "XLS檔|*.xls";
+            openFileDialog1.Title = "開啟工作紀錄檔";
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                sf.xlsFile = openFileDialog1.FileName;
+                toolStripStatusLabel1.Text = "開啟舊檔" + openFileDialog1.FileName;
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("科科");
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("科科");
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("科科");
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("科科");
         }
     }
 }

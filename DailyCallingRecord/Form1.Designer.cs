@@ -56,18 +56,21 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnOpenTxtFile = new System.Windows.Forms.Button();
-            this.btnOpenXlsFile = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.OpenSavedFile = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(222, 15);
+            this.label2.Location = new System.Drawing.Point(222, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 2;
@@ -76,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(437, 15);
+            this.label3.Location = new System.Drawing.Point(437, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 12);
             this.label3.TabIndex = 3;
@@ -85,7 +88,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 109);
+            this.label4.Location = new System.Drawing.Point(16, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 4;
@@ -94,7 +97,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 60);
+            this.label8.Location = new System.Drawing.Point(16, 76);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 12);
             this.label8.TabIndex = 5;
@@ -104,7 +107,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 481);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 493);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(768, 22);
             this.statusStrip1.TabIndex = 9;
@@ -113,40 +116,40 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(47, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(46, 17);
             this.toolStripStatusLabel1.Text = "Ready.";
             // 
             // textBoxEID
             // 
-            this.textBoxEID.Location = new System.Drawing.Point(313, 12);
+            this.textBoxEID.Location = new System.Drawing.Point(313, 28);
             this.textBoxEID.Name = "textBoxEID";
             this.textBoxEID.Size = new System.Drawing.Size(100, 22);
             this.textBoxEID.TabIndex = 10;
             // 
             // textBoxExt
             // 
-            this.textBoxExt.Location = new System.Drawing.Point(528, 12);
+            this.textBoxExt.Location = new System.Drawing.Point(528, 28);
             this.textBoxExt.Name = "textBoxExt";
             this.textBoxExt.Size = new System.Drawing.Size(100, 22);
             this.textBoxExt.TabIndex = 11;
             // 
             // textBoxEndEventTime
             // 
-            this.textBoxEndEventTime.Location = new System.Drawing.Point(313, 54);
+            this.textBoxEndEventTime.Location = new System.Drawing.Point(313, 70);
             this.textBoxEndEventTime.Name = "textBoxEndEventTime";
             this.textBoxEndEventTime.Size = new System.Drawing.Size(100, 22);
             this.textBoxEndEventTime.TabIndex = 13;
             // 
             // textBoxForwordToPartnet
             // 
-            this.textBoxForwordToPartnet.Location = new System.Drawing.Point(528, 55);
+            this.textBoxForwordToPartnet.Location = new System.Drawing.Point(528, 71);
             this.textBoxForwordToPartnet.Name = "textBoxForwordToPartnet";
             this.textBoxForwordToPartnet.Size = new System.Drawing.Size(100, 22);
             this.textBoxForwordToPartnet.TabIndex = 14;
             // 
             // GetEventTime
             // 
-            this.GetEventTime.Location = new System.Drawing.Point(12, 12);
+            this.GetEventTime.Location = new System.Drawing.Point(12, 28);
             this.GetEventTime.Name = "GetEventTime";
             this.GetEventTime.Size = new System.Drawing.Size(75, 23);
             this.GetEventTime.TabIndex = 17;
@@ -156,14 +159,14 @@
             // 
             // textBoxGetEventTime
             // 
-            this.textBoxGetEventTime.Location = new System.Drawing.Point(101, 12);
+            this.textBoxGetEventTime.Location = new System.Drawing.Point(101, 28);
             this.textBoxGetEventTime.Name = "textBoxGetEventTime";
             this.textBoxGetEventTime.Size = new System.Drawing.Size(100, 22);
             this.textBoxGetEventTime.TabIndex = 18;
             // 
             // ForwardToPartner
             // 
-            this.ForwardToPartner.Location = new System.Drawing.Point(439, 55);
+            this.ForwardToPartner.Location = new System.Drawing.Point(439, 71);
             this.ForwardToPartner.Name = "ForwardToPartner";
             this.ForwardToPartner.Size = new System.Drawing.Size(75, 23);
             this.ForwardToPartner.TabIndex = 19;
@@ -173,7 +176,7 @@
             // 
             // textBoxEventDescription
             // 
-            this.textBoxEventDescription.Location = new System.Drawing.Point(101, 106);
+            this.textBoxEventDescription.Location = new System.Drawing.Point(101, 122);
             this.textBoxEventDescription.Name = "textBoxEventDescription";
             this.textBoxEventDescription.Size = new System.Drawing.Size(527, 22);
             this.textBoxEventDescription.TabIndex = 20;
@@ -193,14 +196,14 @@
             "放射科報到系統",
             "放射科報告分派",
             "PACS"});
-            this.comboBoxAppMenu.Location = new System.Drawing.Point(107, 57);
+            this.comboBoxAppMenu.Location = new System.Drawing.Point(107, 73);
             this.comboBoxAppMenu.Name = "comboBoxAppMenu";
             this.comboBoxAppMenu.Size = new System.Drawing.Size(100, 20);
             this.comboBoxAppMenu.TabIndex = 21;
             // 
             // EventEndTime
             // 
-            this.EventEndTime.Location = new System.Drawing.Point(224, 54);
+            this.EventEndTime.Location = new System.Drawing.Point(224, 70);
             this.EventEndTime.Name = "EventEndTime";
             this.EventEndTime.Size = new System.Drawing.Size(75, 23);
             this.EventEndTime.TabIndex = 22;
@@ -210,7 +213,7 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(647, 91);
+            this.buttonSend.Location = new System.Drawing.Point(647, 107);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(109, 37);
             this.buttonSend.TabIndex = 23;
@@ -233,7 +236,7 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGrid1.Location = new System.Drawing.Point(12, 140);
+            this.dataGrid1.Location = new System.Drawing.Point(12, 156);
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.RowTemplate.Height = 24;
             this.dataGrid1.Size = new System.Drawing.Size(745, 329);
@@ -266,7 +269,7 @@
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "結案時間";
+            this.Column5.HeaderText = "問題描述";
             this.Column5.Name = "Column5";
             // 
             // Column6
@@ -276,54 +279,82 @@
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "問題描述";
+            this.Column7.HeaderText = "結案時間";
             this.Column7.Name = "Column7";
             // 
-            // groupBox1
+            // toolStrip1
             // 
-            this.groupBox1.Controls.Add(this.btnOpenXlsFile);
-            this.groupBox1.Controls.Add(this.btnOpenTxtFile);
-            this.groupBox1.Location = new System.Drawing.Point(647, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(109, 73);
-            this.groupBox1.TabIndex = 26;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "開啟紀錄檔";
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenSavedFile,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(768, 25);
+            this.toolStrip1.TabIndex = 29;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
-            // btnOpenTxtFile
+            // OpenSavedFile
             // 
-            this.btnOpenTxtFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOpenTxtFile.BackgroundImage")));
-            this.btnOpenTxtFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOpenTxtFile.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnOpenTxtFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOpenTxtFile.Location = new System.Drawing.Point(6, 21);
-            this.btnOpenTxtFile.Name = "btnOpenTxtFile";
-            this.btnOpenTxtFile.Size = new System.Drawing.Size(40, 40);
-            this.btnOpenTxtFile.TabIndex = 26;
-            this.btnOpenTxtFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOpenTxtFile.UseVisualStyleBackColor = true;
-            this.btnOpenTxtFile.Click += new System.EventHandler(this.btnOpenTxtFile_Click);
+            this.OpenSavedFile.AccessibleName = "";
+            this.OpenSavedFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.OpenSavedFile.Image = ((System.Drawing.Image)(resources.GetObject("OpenSavedFile.Image")));
+            this.OpenSavedFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.OpenSavedFile.Name = "OpenSavedFile";
+            this.OpenSavedFile.Size = new System.Drawing.Size(59, 22);
+            this.OpenSavedFile.Tag = "開啟舊檔";
+            this.OpenSavedFile.Text = "開啟舊檔";
+            this.OpenSavedFile.Click += new System.EventHandler(this.OpenSavedFile_Click);
             // 
-            // btnOpenXlsFile
+            // toolStripButton1
             // 
-            this.btnOpenXlsFile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOpenXlsFile.BackgroundImage")));
-            this.btnOpenXlsFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOpenXlsFile.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnOpenXlsFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOpenXlsFile.Location = new System.Drawing.Point(63, 20);
-            this.btnOpenXlsFile.Name = "btnOpenXlsFile";
-            this.btnOpenXlsFile.Size = new System.Drawing.Size(40, 40);
-            this.btnOpenXlsFile.TabIndex = 27;
-            this.btnOpenXlsFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOpenXlsFile.UseVisualStyleBackColor = true;
-            this.btnOpenXlsFile.Click += new System.EventHandler(this.btnOpenXlsFile_Click);
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButton1.Text = "編輯(E)";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(51, 22);
+            this.toolStripButton2.Text = "檢視(V)";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButton3.Text = "工具(T)";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(52, 22);
+            this.toolStripButton4.Text = "說明(H)";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 503);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(768, 515);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.EventEndTime);
@@ -349,7 +380,8 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,9 +415,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnOpenXlsFile;
-        private System.Windows.Forms.Button btnOpenTxtFile;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton OpenSavedFile;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
     }
 }
 
